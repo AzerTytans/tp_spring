@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 		<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-sample-aop</artifactId>
+	<artifactId>spring-boot-sample-data-jpa</artifactId>
 		<version>1.4.1.BUILD-SNAPSHOT</version>
-	<name>Spring Boot AOP Sample</name>
-	<description>Spring Boot AOP Sample</description>
+	<name>Spring Boot Data JPA Sample</name>
+	<description>Spring Boot Data JPA Sample</description>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>
 		<name>Pivotal Software, Inc.</name>
@@ -17,13 +17,25 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		<version>1.4.1.BUILD-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		<version>1.4.1.BUILD-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>			
+			<version>1.4.192</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		<version>1.4.1.BUILD-SNAPSHOT</version>
+			
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -32,7 +44,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			 				<version>1.4.1.BUILD-SNAPSHOT</version>
+						 				<version>1.4.1.BUILD-SNAPSHOT</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -148,7 +160,5 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
-		
-	
+
 </project>
